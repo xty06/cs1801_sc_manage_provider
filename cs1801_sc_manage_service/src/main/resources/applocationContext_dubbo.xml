@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+	http://code.alibabatech.com/schema/dubbo
+	http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 声明需要暴露的服务接口 -->
+    <!-- <dubbo:service interface="com.huarui.cart.service.CartService" ref="CartServiceImpl" timeout="600000"/> -->
+    <!-- <dubbo:service interface="com.huarui.sso.service.TbUserService" ref="TbUserServiceImpl" timeout="600000"/> -->
+    <!-- <dubbo:service interface="com.huarui.search.service.SearchItemService" ref="SearchItemServiceImpl" timeout="600000"/> -->
+    <!--这个配置就相当于 今天上午 在服务类上家的阿里巴巴的@Service注解-->
+    <dubbo:service interface="com.qf.api.BrandService" ref="brandServiceImpl" timeout="600000"/>
+    <dubbo:service interface="com.qf.api.ItemCatService" ref="itemCatServiceImpl" timeout="600000"/>
+    <dubbo:service interface="com.qf.api.ItemService"    ref="itemServiceImpl" timeout="600000"/>
+</beans>
